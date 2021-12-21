@@ -1,0 +1,225 @@
+/* Fonts */
+@font-face {
+    font-family: MonumentExtendedRegular;
+    src: url(./assets/fonts/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+    font-family: MonumentExtendedLight;
+    src: url(./assets/fonts/MonumentExtended-Light.ttf);
+}
+
+@font-face {
+    font-family: MonumentExtendedUltrabold;
+    src: url(./assets/fonts/MonumentExtended-Ultrabold.otf);
+}
+
+@font-face {
+    font-family: MonumentExtendedBlack;
+    src: url(./assets/fonts/MonumentExtended-Black.ttf);
+}
+
+@keyframes animatedBackground {
+    from {
+        transform: scale(1);
+        filter: hue-rotate(-20deg);
+    }
+    to {
+        transform: scale(1.01);
+        filter: hue-rotate(20deg);
+    }
+}
+
+
+/* Normalizing */
+html, body, * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fafafa;
+}
+
+html, body {
+    font-size: 10px;
+    font-family: 'MonumentExtendedLight', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+/* Custom styles */
+.landing-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    width: 100%;
+    height: 12rem;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.header-logo-link {
+    width: 14rem;
+}
+
+.header-logo-link > img {
+    width: 100%;
+}
+
+.header-link-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-link-list > li {
+    margin: 0 2rem;
+    font-size: 1.2rem;
+}
+
+.header-link-list > li > a {
+    letter-spacing: .2rem;
+    font-family: 'MonumentExtendedLight';
+    font-weight: 600;
+    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.link-main {
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 6px 3px;
+    overflow: hidden;
+    vertical-align: bottom;
+    transition: color .3s ease-out;
+ }
+ .link-main::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100%));
+    width: 100%;
+    height: 100%;
+    background: rgb(236,70,232);
+    background: linear-gradient(32deg, rgba(236,70,232,1) 0%, rgba(228,37,159,1) 0%, rgba(220,37,133,1) 7%, rgba(139,38,227,1) 83%, rgba(109,92,240,1) 100%);
+    transition: transform .25s cubic-bezier(0.215, 0.610, 0.355, 1);
+ }
+ 
+ .link-main:hover::before {
+    transform: translateY(52%);
+    transition: transform .25s ease-out;
+ }
+
+.header-link-list > li:first-child {
+    margin-left: 0;
+}
+
+.header-link-list > li:last-child {
+    margin-right: 0;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-section-back {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /* animation: animatedBackground 6s linear infinite alternate; */
+    z-index: -1;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.title {
+    max-width: 100%;
+    font-family: 'MonumentExtendedRegular';
+    font-weight: 200;
+    font-size: 5.6rem;
+    letter-spacing: .3rem;
+}
+
+.black-layout {
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    max-height: 100vh;
+    z-index: 0;
+}
+
+.black-layout-top {
+    top: 0;
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    z-index: 0;
+}
+
+.black-layout-bot {
+    bottom: 0;
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    z-index: 0;
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+    font-size: 1.7rem;
+    letter-spacing: .2rem;
+    font-family: 'MonumentExtendedRegular';
+    font-weight: 100;
+    transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 1rem;
+}
+
+.call-to-action > img {
+    width: 2.5rem;
+    margin-left: 1.3rem;
+    padding-bottom: .3rem;
+    transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.call-to-action:hover {
+    background-color: #19191b;
+    transform: translateX(.4rem) scale(0.98);
+}
+
+.call-to-action:hover > img {
+    transform: translateX(-.5rem);
+}
