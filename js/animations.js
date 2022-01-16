@@ -16,7 +16,7 @@ $(document).ready(() => {
         opacity: 0
     })
 
-    var backAnimation = new TweenMax.to('#first-section', .5, {
+    var backAnimation = new TweenMax.to('#first-section', .85, {
         scale: 1.2,
         ease: Circ.easeIn,
         opacity: 0,
@@ -28,7 +28,7 @@ $(document).ready(() => {
     
     // Creating the scroll interations for the first section
     new ScrollMagic.Scene({
-        duration: 1300,
+        duration: 1700,
         offset: 0
     })
     .setPin('#first-section')
@@ -36,7 +36,7 @@ $(document).ready(() => {
     .addTo(controller);
 
     var timelinePortfolio = new TimelineMax();
-    var portolfioTitleAnimation = new TweenMax.from('#portfolio', .2, {
+    var portolfioTitleAnimation = new TweenMax.from('#portfolio', .35, {
         scale: 1,
         x: '-10vw',
         ease: Circ.easeOut,
@@ -105,15 +105,31 @@ $(document).ready(() => {
         delay: 1.92,
         opacity: 0
     });
-    var portolfioTitleAnimationEnd = new TweenMax.to('#portfolio', .3, {
+    var portolfioTitleAnimationEnd = new TweenMax.to('#portfolio', .4, {
         scale: 1,
         x: '-10vw',
         ease: Circ.easeIn,
         opacity: 0
     });
+    var lines1SectionAnimation = new TweenMax.from('#lines2', 1.5, {
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.3,
+        blur: '3px',
+        index: 0
+    });
+
+    var lines1SectionAnimationTo = new TweenMax.to('#lines2', 1.5, {
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.3,
+        blur: '3px',
+        index: 0
+    });
 
     timelinePortfolio
         .add(portolfioTitleAnimation, "first")
+        .add(lines1SectionAnimation, "first")
         .add(portolfioAnimation, "second")
         .add(portolfioAnimation2, "second")
         .add(cardAnimation1, 'second')
@@ -123,10 +139,11 @@ $(document).ready(() => {
         .add(cardAnimation5, 'second')
         .add(cardAnimation6, 'second')
         .add(portolfioTitleAnimationEnd, 'third')
+        .add(lines1SectionAnimationTo, "third")
 
     new ScrollMagic.Scene({
         triggerElement: "#second-section",
-        duration: 3500,
+        duration: 3800,
         triggerHook: 0
     })
     .setPin('#second-section')
@@ -134,7 +151,7 @@ $(document).ready(() => {
     .addTo(controller)
 
 
-    // Creating the scroll interations for the first section
+    // Creating the scroll interations for the second section
     var timelineNosotros = new TimelineMax();
     var nosotrosTitleAnimation = new TweenMax.from('#nosotros', 1, {
         scale: 1,
@@ -143,15 +160,99 @@ $(document).ready(() => {
         opacity: 0
     });
 
+    var nosotrosSectionAnimation = new TweenMax.from('#about-us-container', 1.5, {
+        scale: 1,
+        y: '15vh',
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.5
+    });
+
+    var nosotrosTitleAnimationTo = new TweenMax.to('#nosotros', 1.5, {
+        scale: 1,
+        y: '-15vh',
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.5
+    });
+
+    var nosotrosSectionAnimationTo = new TweenMax.to('#about-us-container', 1.5, {
+        scale: 1,
+        y: '-15vh',
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.5
+    });
+
+    var lines2SectionAnimation = new TweenMax.from('#lines1', 1.5, {
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.3,
+        blur: '3px',
+        index: 0
+    });
+
+    var lines2SectionAnimationTo = new TweenMax.to('#lines1', 1.5, {
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.3,
+        blur: '3px',
+        index: 0
+    });
+
     timelineNosotros
         .add(nosotrosTitleAnimation, "first")
+        .add(nosotrosSectionAnimation, "first")
+        .add(lines2SectionAnimation, "first")
+        .add(nosotrosTitleAnimationTo, "second")
+        .add(nosotrosSectionAnimationTo, "second")
+        .add(lines2SectionAnimationTo, "second")
 
     new ScrollMagic.Scene({
-        duration: 1300,
+        duration: 1950,
         triggerElement: '#third-section',
         triggerHook: 0
     })
     .setPin('#third-section')
+    .setTween(timelineNosotros)
+    .addTo(controller);
+
+    // Creating the scroll interations for the last section
+    var timelineNosotros = new TimelineMax();
+    var contactoTitleAnimation = new TweenMax.from('#contacto', 1, {
+        scale: 1,
+        y: '10vh',
+        ease: Circ.easeOut,
+        opacity: 0
+    });
+
+    var contactoSectionAnimation = new TweenMax.from('#contact-container', 1.5, {
+        scale: 1,
+        y: '15vh',
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.5
+    });
+
+    var linesSectionAnimation = new TweenMax.from('#lines3', 1.5, {
+        ease: Power1.easeInOut,
+        opacity: 0,
+        delay: 0.3,
+        blur: '3px',
+        index: 0
+    });
+
+    timelineNosotros
+        .add(contactoTitleAnimation, "first")
+        .add(contactoSectionAnimation, "first")
+        .add(linesSectionAnimation, "first")
+
+    new ScrollMagic.Scene({
+        duration: 1400,
+        triggerElement: '#fourth-section',
+        triggerHook: 0
+    })
+    .setPin('#fourth-section')
     .setTween(timelineNosotros)
     .addTo(controller);
 });

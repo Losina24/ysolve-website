@@ -15,8 +15,8 @@
         </a>
         
         <ul class="header-link-list">
-            <li><a href="" class="link-main">Portfolio</a></li>
             <li><a href="" class="link-main">Nosotros</a></li>
+            <li><a href="" class="link-main">Portfolio</a></li>
             <li><a href="" class="link-main">Contacto</a></li>
         </ul>
         
@@ -25,7 +25,7 @@
     <!-- Container -->
     <div class="landing-container">
 
-        <!-- First section -->
+        <!-- Landing Page -->
         <main id="first-section" class="main-section">
             <div id="title" class="main-content">
                 <h1 class="title">Desarrollo de software <br> e ingeniería electrónica</h1>
@@ -36,7 +36,27 @@
             <img src="./assets/img/Fondo sin negro.png" alt="" id="img-back" class="main-section-back">
         </main>
 
-        <!-- Second section -->
+        <!-- Nosotros -->
+        <section id="third-section" class="landing-section">
+            <h2 id="nosotros">Nosotros</h2>
+
+            <div id="about-us-container" class="about-us-container">
+                <article class="about-us-article">
+                    <h3>¿Qué hacemos?</h3>
+                    <p>En Ysolve diseñamos y desarrollamos soluciones tecnológicas a problemas actuales mediante el uso de las técnicas y tecnologías más novedosas.</p>
+                    <p>Entre nuestro catálogo de servicios se encuentran: Desarrollo de dispositivos IoT, plataformas web de gestión, dispositivos biométricos, robótica aplicada, inteligencia artificial, diseño y desarrollo de páginas web y ecommerces...</p>
+
+                    <button class="about-us-button">¿Quieres saber más?</button>
+                </article>
+                
+                <article class="about-us-image">
+                    <img src="./assets/img/IMG_3273.JPG" alt="">
+                </article>
+            </div>
+            <img id="lines1" class="background-lines" src="./assets/img/lines2.png" alt="">
+        </section>
+
+        <!-- Portfolio -->
         <section id="second-section" class="landing-section">
             <h2 id="portfolio">Portfolio</h2>
 
@@ -89,13 +109,43 @@
                     <img src="./assets/img/Fondo sin negro.png" alt="">
                 </div>
             </div>
+            <img id="lines2" class="background-lines" src="./assets/img/lines2.png" alt="">
         </section>
 
-        <section id="third-section" class="landing-section">
-            <h2 id="nosotros">Nosotros</h2>
-        </section>
+        <!-- Contacto -->
+        <section id="fourth-section" class="landing-section">
+            <h2 id="contacto">Contacto</h2>
 
+            <div id="contact-container" class="about-us-container">
+                <article class="about-us-article">
+                    <h3>¿Tienes un proyecto entre manos?</h3>
+                    <p>Puedes mandarnos un email utilizando este formulario o puedes llamarnos haciendo click en el siguiente botón:</p>
+
+                    <a href="tel:627669080" class="about-us-button">Llámanos por teléfono</a>
+                </article>
+                
+                <article class="about-us-image">
+                    <form>
+                        <label for="email">Correo electrónico:</label>
+                        <input name="email" type="text" placeholder="tu-email@ejemplo.com">
+
+                        <label for="subject">Asunto:</label>
+                        <input name="subject" type="text" placeholder="Escribe un asunto...">
+
+                        <label for="body">Cuerpo:</label>
+                        <textarea name="body" id="body" cols="30" rows="5" placeholder="Escribe un cuerpo..."></textarea>
+
+                        <input class="submit" type="submit" value="Enviar">
+                    </form>
+                </article>
+            </div>
+            <img id="lines3" class="background-lines" src="./assets/img/lines2.png" alt="">
+        </section>
     </div>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
 
 
     <script src="js/jquery.min.js"></script>
