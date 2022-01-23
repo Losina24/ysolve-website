@@ -51,7 +51,7 @@ $(document).ready(() => {
     var portolfioAnimation = new TweenMax.to('.portfolio-container', 2.5, 
     {
         scale: 1,
-        x: '-250vw',
+        x: '-270vw',
         webkitFilter:"blur(0px)",
         ease: Power0.easeInOut
     });
@@ -139,7 +139,7 @@ $(document).ready(() => {
         index: 0
     });
 
-    var lines2SectionAnimationTo = new TweenMax.to('#lines1', .8, {
+    var lines2SectionAnimationTo = new TweenMax.to('#lines1', 1.4, {
         ease: Power1.easeInOut,
         opacity: 0,
         delay: 0.3,
