@@ -1,493 +1,491 @@
 /* Fonts */
+
 @font-face {
-  font-family: MonumentExtendedRegular;
-  src: url(./assets/fonts/MonumentExtended-Regular.otf);
+    font-family: MonumentExtendedRegular;
+    src: url(./assets/fonts/MonumentExtended-Regular.otf);
 }
 
 @font-face {
-  font-family: MonumentExtendedLight;
-  src: url(./assets/fonts/MonumentExtended-Light.ttf);
+    font-family: MonumentExtendedLight;
+    src: url(./assets/fonts/MonumentExtended-Light.ttf);
 }
 
 @font-face {
-  font-family: MonumentExtendedUltrabold;
-  src: url(./assets/fonts/MonumentExtended-Ultrabold.otf);
+    font-family: MonumentExtendedUltrabold;
+    src: url(./assets/fonts/MonumentExtended-Ultrabold.otf);
 }
 
 @font-face {
-  font-family: MonumentExtendedBlack;
-  src: url(./assets/fonts/MonumentExtended-Black.ttf);
+    font-family: MonumentExtendedBlack;
+    src: url(./assets/fonts/MonumentExtended-Black.ttf);
 }
 
 @keyframes animatedBackground {
-  from {
-    transform: scale(1);
-    filter: hue-rotate(-20deg);
-  }
-  to {
-    transform: scale(1.04);
-    filter: hue-rotate(10deg);
-  }
+    from {
+        transform: scale(1);
+        filter: hue-rotate(-20deg);
+    }
+    to {
+        transform: scale(1.04);
+        filter: hue-rotate(10deg);
+    }
 }
 
+
 /* Normalizing */
+
 html,
 body,
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  color: #fafafa;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fafafa;
 }
 
 html,
 body {
-  font-size: 10px;
-  font-family: "MonumentExtendedLight", sans-serif;
-  width: 100vw;
-  overflow-x: hidden;
-  background-color: #101011;
-  z-index: 0;
+    font-size: 10px;
+    font-family: "MonumentExtendedLight", sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #101011;
+    z-index: 0;
 }
+
 
 /* width */
+
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
+
 
 /* Track */
+
 ::-webkit-scrollbar-track {
-  background: #1e1e20;
-  transition: .2s ease-in-out;
+    background: #1e1e20;
+    transition: .2s ease-in-out;
 }
+
 
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: rgb(241, 56, 111);
+    background: rgb(241, 56, 111);
 }
+
 
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(127, 68, 204);
-  
+    background: rgb(127, 68, 204);
 }
 
-ul, ol, li {
-  list-style: none;
+ul,
+ol,
+li {
+    list-style: none;
 }
+
 
 /* Custom styles */
+
 .landing-header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5rem;
-  width: 100%;
-  height: 12rem;
-  box-sizing: border-box;
-  z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    width: 100%;
+    height: 12rem;
+    box-sizing: border-box;
+    z-index: 100;
 }
 
 .header-logo-link {
-  width: 14rem;
+    width: 14rem;
 }
 
-.header-logo-link > img {
-  width: 100%;
+.header-logo-link>img {
+    width: 100%;
 }
 
 .header-link-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header-link-list > li {
-  margin: 0 2rem;
-  font-size: 1.2rem;
+.header-link-list>li {
+    margin: 0 2rem;
+    font-size: 1.2rem;
 }
 
-.header-link-list > li > a {
-  letter-spacing: 0.15rem;
-  font-family: "MonumentExtendedLight";
-  font-weight: 600;
-  transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+.header-link-list>li>a {
+    letter-spacing: 0.15rem;
+    font-family: "MonumentExtendedLight";
+    font-weight: 600;
+    transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .link-main {
-  text-decoration: none;
-  line-height: 1;
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  padding: 6px 3px;
-  overflow: hidden;
-  vertical-align: bottom;
-  transition: color 0.3s ease-out;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 6px 3px;
+    overflow: hidden;
+    vertical-align: bottom;
+    transition: color 0.3s ease-out;
 }
+
 .link-main::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  transform: translateY(calc(100%));
-  width: 100%;
-  height: 100%;
-  background: rgb(236, 70, 232);
-  /* background: linear-gradient(32deg, rgba(236,70,232,1) 0%, rgba(228,37,159,1) 0%, rgba(220,37,133,1) 7%, rgba(139,38,227,1) 83%, rgba(109,92,240,1) 100%); */
-  background: linear-gradient(
-    247deg,
-    rgba(109, 92, 240, 1) 0%,
-    rgba(220, 37, 133, 1) 45%,
-    rgba(231, 56, 56, 1) 100%,
-    rgba(220, 37, 133, 1) 100%
-  );
-  transition: transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100%));
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 70, 232);
+    /* background: linear-gradient(32deg, rgba(236,70,232,1) 0%, rgba(228,37,159,1) 0%, rgba(220,37,133,1) 7%, rgba(139,38,227,1) 83%, rgba(109,92,240,1) 100%); */
+    background: linear-gradient( 247deg, rgba(109, 92, 240, 1) 0%, rgba(220, 37, 133, 1) 45%, rgba(231, 56, 56, 1) 100%, rgba(220, 37, 133, 1) 100%);
+    transition: transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .link-main:hover::before {
-  transform: translateY(52%);
-  transition: transform 0.25s ease-out;
+    transform: translateY(52%);
+    transition: transform 0.25s ease-out;
 }
 
-.header-link-list > li:first-child {
-  margin-left: 0;
+.header-link-list>li:first-child {
+    margin-left: 0;
 }
 
-.header-link-list > li:last-child {
-  margin-right: 0;
+.header-link-list>li:last-child {
+    margin-right: 0;
 }
 
 .landing-container {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .main-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #101011;
-  z-index: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #101011;
+    z-index: 0;
 }
 
 .main-section-back {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  /*animation: animatedBackground 3s linear infinite alternate;*/
-  z-index: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /*animation: animatedBackground 3s linear infinite alternate;*/
+    z-index: 0;
 }
 
 .main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 2;
 }
 
 .title {
-  max-width: 100%;
-  font-family: "MonumentExtendedRegular";
-  font-weight: 200;
-  font-size: 5.6rem;
-  letter-spacing: 0.3rem;
+    max-width: 100%;
+    font-family: "MonumentExtendedRegular";
+    font-weight: 200;
+    font-size: 5.6rem;
+    letter-spacing: 0.3rem;
 }
 
 .black-layout {
-  position: absolute;
-  object-fit: cover;
-  width: 100vw;
-  max-height: 100vh;
-  z-index: 1;
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    max-height: 100vh;
+    z-index: 1;
 }
 
 .black-layout-top {
-  top: 0;
-  position: absolute;
-  object-fit: cover;
-  width: 100vw;
-  z-index: 1;
+    top: 0;
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    z-index: 1;
 }
 
 .black-layout-bot {
-  bottom: 0;
-  position: absolute;
-  object-fit: cover;
-  width: 100vw;
-  z-index: 1;
+    bottom: 0;
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    z-index: 1;
 }
 
 .call-to-action {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-self: flex-end;
-  margin-top: 5rem;
-  margin-bottom: -3rem;
-  font-size: 1.7rem;
-  letter-spacing: 0.2rem;
-  font-family: "MonumentExtendedRegular";
-  font-weight: 100;
-  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  padding: 1.5rem;
-  border-radius: 0.85rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    font-family: "MonumentExtendedRegular";
+    font-weight: 100;
+    transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 1.5rem;
+    border-radius: 0.85rem;
 }
 
-.call-to-action > img {
-  width: 2.5rem;
-  margin-left: 1.3rem;
-  padding-bottom: 0.3rem;
-  transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+.call-to-action>img {
+    width: 2.5rem;
+    margin-left: 1.3rem;
+    padding-bottom: 0.3rem;
+    transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .call-to-action:hover {
-  background-color: #19191b;
-  transform: translateX(0.4rem) scale(0.98);
+    background-color: #19191b;
+    transform: translateX(0.4rem) scale(0.98);
 }
 
-.call-to-action:hover > img {
-  transform: translateX(-0.5rem);
+.call-to-action:hover>img {
+    transform: translateX(-0.5rem);
 }
 
 .landing-section {
-  width: 100vw;
-  height: 100vh;
-  background-color: #e4e3d900;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e4e3d900;
 }
 
 #second-section {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  z-index: 11;
-  background-color: #10101100;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 11;
+    background-color: #10101100;
 }
 
-#second-section > h2,
-#third-section > h2,
-#fourth-section > h2 {
-  display: flex;
-  align-items: center;
-  font-family: "MonumentExtendedLight";
-  font-weight: 100;
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-  padding: 6rem 6rem 2rem 6rem;
+#second-section>h2,
+#third-section>h2,
+#fourth-section>h2 {
+    display: flex;
+    align-items: center;
+    font-family: "MonumentExtendedLight";
+    font-weight: 100;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    padding: 6rem 6rem 2rem 6rem;
 }
 
 .portfolio-container {
-  display: flex;
-  width: fit-content;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 12rem);
-  padding-left: 90vw;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 12rem);
+    padding-left: 90vw;
 }
 
 .portfolio-card {
-  position: relative;
-  width: 42rem;
-  height: 42rem;
-  margin: 8rem 6rem;
-  background-color: rgb(22, 22, 27);
-  -webkit-box-shadow: 13px 13px 54px -12px rgba(80, 80, 80, 0.54);
-  -moz-box-shadow: 13px 13px 54px -12px rgba(80, 80, 80, 0.54);
-  box-shadow: 10px 10px 100px -20px rgba(0, 0, 0, 0.35);
-  border-radius: 0.6rem;
+    position: relative;
+    width: 42rem;
+    height: 42rem;
+    margin: 8rem 6rem;
+    background-color: rgb(22, 22, 27);
+    -webkit-box-shadow: 13px 13px 54px -12px rgba(80, 80, 80, 0.54);
+    -moz-box-shadow: 13px 13px 54px -12px rgba(80, 80, 80, 0.54);
+    box-shadow: 10px 10px 100px -20px rgba(0, 0, 0, 0.35);
+    border-radius: 0.6rem;
 }
 
 .portfolio-card:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
-.portfolio-card > img {
-  object-fit: cover;
-  height: 42rem;
-  width: 42rem;
-  border-radius: 0.6rem;
+.portfolio-card>img {
+    object-fit: cover;
+    height: 42rem;
+    width: 42rem;
+    border-radius: 0.6rem;
 }
 
-.portfolio-card > div {
-  position: absolute;
-  bottom: 0;
+.portfolio-card>div {
+    position: absolute;
+    bottom: 0;
 }
 
 .card-text {
-  padding: 1rem;
-  margin-bottom: -5.8rem;
+    padding: 1rem;
+    margin-bottom: -5.8rem;
 }
 
-.card-text > p {
-  font-size: 1.1rem;
-  letter-spacing: 0.12rem;
-  font-family: "MonumentExtendedLight";
-  font-weight: 100;
+.card-text>p {
+    font-size: 1.1rem;
+    letter-spacing: 0.12rem;
+    font-family: "MonumentExtendedLight";
+    font-weight: 100;
 }
 
-.card-text > h3 {
-  font-size: 1.5rem;
-  letter-spacing: 0.12rem;
-  font-family: "MonumentExtendedRegular";
-  font-weight: 100;
+.card-text>h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    font-family: "MonumentExtendedRegular";
+    font-weight: 100;
 }
 
-#third-section, #fourth-section {
-  height: 100vh;
+#third-section,
+#fourth-section {
+    height: 100vh;
 }
 
 .about-us-container {
-  display: flex;
-  justify-content: space-between;
-  height: calc(100vh - 12rem);
-  z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 12rem);
+    z-index: 3;
 }
 
 .about-us-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 55%;
-  padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 55%;
+    padding: 8rem;
 }
 
-.about-us-article > h3 {
-  font-size: 5rem;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+.about-us-article>h3 {
+    font-size: 5rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
 }
 
-.about-us-article > p {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  line-height: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  width: 80%;
+.about-us-article>p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 80%;
 }
 
 .about-us-image {
-  display: flex;
-  align-items: center;
-  width: 45%;
+    display: flex;
+    align-items: center;
+    width: 45%;
 }
 
-.about-us-image > img {
-  width: 90%;
-  padding-right: 6rem;
-  box-sizing: border-box;
+.about-us-image>img {
+    width: 90%;
+    padding-right: 6rem;
+    box-sizing: border-box;
 }
 
 .about-us-button,
 .submit {
-  margin-top: 4rem;
-  padding: 1.75rem 1.45rem 1.65rem 1.45rem;
-  background: rgb(109, 92, 240);
-  background: linear-gradient(
-    247deg,
-    rgba(109, 92, 240, 1) 0%,
-    rgba(220, 37, 133, 1) 45%,
-    rgba(231, 56, 56, 1) 100%,
-    rgba(220, 37, 133, 1) 100%
-  );
-  border: none;
-  font-family: "MonumentExtendedLight";
-  font-weight: 900;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: 0.25s ease-in-out;
+    margin-top: 4rem;
+    padding: 1.75rem 1.45rem 1.65rem 1.45rem;
+    background: rgb(109, 92, 240);
+    background: linear-gradient( 247deg, rgba(109, 92, 240, 1) 0%, rgba(220, 37, 133, 1) 45%, rgba(231, 56, 56, 1) 100%, rgba(220, 37, 133, 1) 100%);
+    border: none;
+    font-family: "MonumentExtendedLight";
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
 }
 
 .about-us-button:hover {
-  border-radius: 1.4rem;
-  transform: scale(1.04);
+    border-radius: 1.4rem;
+    transform: scale(1.04);
 }
 
 .phone-number {
-  font-family: "MonumentExtendedLight";
-  font-weight: 900;
-  padding: 0.3rem;
-  background: rgb(109, 92, 240);
-  background: linear-gradient(
-    247deg,
-    rgba(109, 92, 240, 1) 0%,
-    rgba(220, 37, 133, 1) 45%,
-    rgba(231, 56, 56, 1) 100%,
-    rgba(220, 37, 133, 1) 100%
-  );
+    font-family: "MonumentExtendedLight";
+    font-weight: 900;
+    padding: 0.3rem;
+    background: rgb(109, 92, 240);
+    background: linear-gradient( 247deg, rgba(109, 92, 240, 1) 0%, rgba(220, 37, 133, 1) 45%, rgba(231, 56, 56, 1) 100%, rgba(220, 37, 133, 1) 100%);
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  padding: 2.3rem 2.7rem;
-  background-color: #0e0e0f;
-  background-color: #1e1e22;
-  border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2.3rem 2.7rem;
+    background-color: #0e0e0f;
+    background-color: #1e1e22;
+    border-radius: 2rem;
 }
 
 input,
 textarea {
-  border: none;
-  padding: 1.75rem;
-  background-color: #121214;
-  color: rgb(197, 197, 197);
-  font-family: "MonumentExtendedLight";
-  font-weight: 900;
-  font-size: 1.1rem;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
-  outline: none;
+    border: none;
+    padding: 1.75rem;
+    background-color: #121214;
+    color: rgb(197, 197, 197);
+    font-family: "MonumentExtendedLight";
+    font-weight: 900;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    outline: none;
 }
 
 ::-webkit-input-placeholder {
-  font-family: "MonumentExtendedRegular";
-  font-weight: 900;
-  color: #3f3f49;
+    font-family: "MonumentExtendedRegular";
+    font-weight: 900;
+    color: #3f3f49;
 }
 
 .submit {
-  margin: auto;
-  /* width: 100%; */
-  padding: 1.25rem 5rem;
-  color: #fff;
+    margin: auto;
+    /* width: 100%; */
+    padding: 1.25rem 5rem;
+    color: #fff;
 }
 
 .submit:hover {
-  border-radius: 1.25rem;
-  transform: scale(1.05);
+    border-radius: 1.25rem;
+    transform: scale(1.05);
 }
 
 label {
-  font-size: 1.1rem;
-  font-weight: 900;
-  letter-spacing: 1px;
-  margin-bottom: 0.8rem;
-  margin-top: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    margin-top: 0.2rem;
 }
 
 .background-lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.1;
-  z-index: -1 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+    z-index: -1 !important;
 }
 
 .upper-object {
@@ -505,108 +503,98 @@ footer {
 }
 
 .menu {
-  display: none;
+    display: none;
 }
 
 @media (max-width: 1600px) {
-  .title {
-    font-size: 4.8rem;
-    letter-spacing: 0.3rem;
-  }
-
-  .call-to-action {
-    margin-top: 4rem;
-    font-size: 1.5rem;
-  }
+    .title {
+        font-size: 4.8rem;
+        letter-spacing: 0.3rem;
+    }
+    .call-to-action {
+        margin-top: 4rem;
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 1200px) {
-    #second-section, #third-section, #fourth-section, .main-section-nm {
+    #second-section,
+    #third-section,
+    #fourth-section,
+    .main-section-nm {
         display: none !important;
     }
-
     /* width */
-    ::-webkit-scrollbar {
+     ::-webkit-scrollbar {
         width: 8px;
         display: none;
     }
-    
     /* Track */
-    ::-webkit-scrollbar-track {
+     ::-webkit-scrollbar-track {
         background: #1e1e20;
         transition: .2s ease-in-out;
         display: none;
     }
-    
     /* Handle */
-    ::-webkit-scrollbar-thumb {
+     ::-webkit-scrollbar-thumb {
         background: rgb(241, 56, 111);
         display: none;
     }
-    
     /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
+     ::-webkit-scrollbar-thumb:hover {
         background: rgb(127, 68, 204);
         display: none;
     }
-
-    #third-section-mobile {
-      padding-bottom: 8rem;
-    }
-
+    /* #third-section-mobile {
+padding-bottom: 8rem;
+} */
     .title {
-      font-size: 4.8rem;
-      letter-spacing: 0.3rem;
+        font-size: 4.8rem;
+        letter-spacing: 0.3rem;
     }
-  
     .call-to-action {
-      margin-top: 4rem;
-      font-size: 1.5rem;
+        margin-top: 4rem;
+        font-size: 1.5rem;
     }
-
     .mobile {
         display: flex;
         flex-direction: column;
         height: auto;
         width: 100vw;
     }
-
-    .mobile > h2 {
+    .mobile>h2 {
         display: flex;
         align-items: center;
         height: 7rem;
         padding: 0 2rem;
     }
-
     .mobile-container {
         display: flex;
         flex-direction: column;
         padding: 0;
     }
-
-    .about-us-article, #second-section-mobile {
+    .about-us-article,
+    #second-section-mobile {
         box-sizing: border-box;
         padding: 0 2rem;
         width: 100vw;
     }
-
-    .about-us-article > h3, #second-section-mobile > h3 {
+    .about-us-article>h3,
+    #second-section-mobile>h3 {
         font-size: 3.5rem;
         margin-bottom: 2.4rem;
     }
-
-    #second-section-mobile > h3 {
+    #second-section-mobile>h3 {
         margin-top: 8rem;
     }
-
     .portfolio-container-mobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
-    .about-us-article > p, #second-section-mobile > p {
+    .about-us-article>p,
+    #second-section-mobile>p {
         width: 100%;
         margin: 0;
         margin-bottom: 2rem;
@@ -614,183 +602,330 @@ footer {
         letter-spacing: 1px;
         line-height: 3rem;
     }
-
-    .about-us-article > img {
+    .about-us-article>img {
         width: 100%;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-
     .about-us-button {
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-
     #second-section-mobile {
         display: flex;
         flex-direction: column;
         height: auto;
         justify-content: center;
     }
-
     .portfolio-container-mobile {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     .portfolio-card {
         width: 100%;
         height: 100%;
         margin: 1rem 0 10rem 0;
     }
-
-    .portfolio-card > img {
+    .portfolio-card>img {
         width: 100%;
         height: 90vw;
     }
-
     .about-us-button {
-      width: max-content;
-      margin-top: 0rem;
-      margin-bottom: 4rem;
+        width: max-content;
+        margin-top: 0rem;
+        margin-bottom: 4rem;
     }
-
     .about-us-image-mobile {
-      width: 100%;
+        width: 100%;
     }
-
     form {
-      width: 100%;
-      box-sizing: border-box;
-      margin-bottom: 5rem;
-      border-radius: 1.6rem;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 5rem;
+        border-radius: 1.6rem;
     }
-
     .ms-mobile {
-      height: 100vh;
-      margin-bottom: 4rem;
-      box-sizing: border-box;
-      justify-content: center;
+        height: 100vh;
+        margin-bottom: 4rem;
+        box-sizing: border-box;
+        justify-content: center;
     }
-
     .img-back {
-      width: 100%;
+        width: 100%;
     }
-
     .landing-header {
-      display: none;
+        display: none;
     }
-
     .landing-header-mobile {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      box-sizing: border-box;
-      flex-direction: row;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 3rem;
-      z-index: 11;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: row;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 3rem;
+        z-index: 11;
     }
-
     .main-content {
-      width: 85%;
+        width: 85%;
     }
-
     .title {
-      font-size: 3.5rem;
-      width: 100%;
+        font-size: 3.5rem;
+        width: 100%;
     }
-
     .call-to-action {
-      align-self: flex-start;
+        align-self: flex-start;
     }
-
     .header-logo-link {
-      width: 4rem;
+        width: 4rem;
     }
-
     .menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      background-color: #0d0d0e;
-      z-index: 10; 
-      overflow: hidden;
-      overflow-y: hidden;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: #0d0d0e;
+        z-index: 10;
+        overflow: hidden;
+        overflow-y: hidden;
     }
-
-    .menu > div {
-      display: flex;
-      flex-direction: column;
-      margin-top: 12rem;
-      margin-left: 3rem;
+    .menu>div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12rem;
+        margin-left: 3rem;
     }
+    .menu>div>a {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
+    }
+}
 
-    .menu > div > a {
-      font-size: 2.4rem;
-      font-weight: 500;
-      margin-bottom: 3rem;
+@media (max-width: 800px) {
+    .main-content {
+        margin-left: 3rem;
+    }
+    .title {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    .call-to-action {
+        margin-top: 0.75rem;
+        padding-left: 0px;
+    }
+    /* CSS NOSOTROS */
+    .about-us-container>article {
+        padding: 3rem;
+    }
+    .mobile-container {
+        height: auto;
+    }
+    .about-us-article {
+        padding: 3rem;
+    }
+    .about-us-article>h3 {
+        font-size: 2.5rem;
+    }
+    /* CSS PORTFOLIO */
+    #second-section-mobile {
+        padding: 0px 3rem;
+    }
+    #second-section-mobile>h3 {
+        margin-top: 0px;
+        margin-bottom: 0.5rem;
+    }
+    .portfolio-card {
+        height: auto;
+        margin-bottom: 7rem;
+    }
+    /* CSS CONTACTO */
+    .about-us-article,
+    #five-section-mobile {
+        box-sizing: border-box;
+        padding: 0 3rem;
+        width: 100vw;
+    }
+    .about-us-article>h3,
+    #five-section-mobile>h3 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .portfolio-container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-us-article>p,
+    #five-section-mobile>p {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 3rem;
+    }
+    .about-us-article>img {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .about-us-button {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        width: fit-content;
+    }
+    #five-section-mobile {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .title {
+        font-size: 22.5px;
+        text-align: center;
+    }
+    .call-to-action {
+        margin-top: 0.75rem;
+        padding-left: 0px;
+        align-self: center;
+    }
+    /* CSS NOSOTROS */
+    .mobile-container {
+        height: auto;
+    }
+    #about-us-container>article {
+        padding: 0rem 3rem;
+    }
+    #about-us-container>article>h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    #about-us-container>article>p {
+        font-size: 1.35rem;
+    }
+    /* CSS PORTFOLIO */
+    #second-section-mobile {
+        padding: 0px 3rem;
+        padding-top: 2rem;
+    }
+    #second-section-mobile>h3 {
+        font-size: 2.5rem;
+    }
+    #second-section-mobile>p {
+        font-size: 1.35rem;
+    }
+    .portfolio-card {
+        height: auto;
+        margin-bottom: 7rem;
+    }
+    /* CSS CONTACTO */
+    .about-us-article,
+    #five-section-mobile {
+        padding: 0 3rem;
+    }
+    .about-us-article>h3,
+    #five-section-mobile>h3 {
+        font-size: 2.5rem;
+    }
+    .portfolio-container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-us-article>p,
+    #five-section-mobile>p {
+        font-size: 1.35rem;
+    }
+    .about-us-article>img {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .about-us-button {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        width: fit-content;
+    }
+    #five-section-mobile {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
     }
 }
 
 
 /* Menu */
-.row .three{
-  padding: 80px 30px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #2c3e50;
-  color: #171717;
-  text-align: center;
+
+.row .three {
+    padding: 80px 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+    color: #171717;
+    text-align: center;
 }
-.burger-click{
+
+.burger-click {
     background-color: #fafafa !important;
     z-index: 90 !important;
 }
-.hamburger .line{
-  width: 25px;
-  height: 2px;
-  background-color: #f3f3f3;
-  display: block;
-  margin: 8px auto;
-  margin-left: 1.2rem;
-  z-index: 5;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  z-index: 100 !important;
+
+.hamburger .line {
+    width: 25px;
+    height: 2px;
+    background-color: #f3f3f3;
+    display: block;
+    margin: 8px auto;
+    margin-left: 1.2rem;
+    z-index: 5;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 100 !important;
 }
-.hamburger:hover{
-  cursor: pointer;
+
+.hamburger:hover {
+    cursor: pointer;
 }
-.scroll{
+
+.scroll {
     display: none;
-  }
-#hamburger-1.is-active .line:nth-child(2){
+}
+
+#hamburger-1.is-active .line:nth-child(2) {
     opacity: 0;
 }
 
-#hamburger-1.is-active .line:nth-child(1){
-    -webkit-transform: translateY(13px)   rotate(45deg);
+#hamburger-1.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
     -ms-transform: translateY(7px) rotate(45deg);
     -o-transform: translateY(7px) rotate(45deg);
     transform: translateY(7px) rotate(45deg);
 }
 
-#hamburger-1.is-active .line:nth-child(3){
-    -webkit-transform: translateY(-13px)   rotate(-45deg);
-    -ms-transform: translateY(-13px)   rotate(-45deg);
+#hamburger-1.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
     -o-transform: translateY(-13px) rotate(-45deg);
     transform: translateY(-13px) rotate(-45deg);
 }
 
 .overflow {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
