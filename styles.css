@@ -487,6 +487,7 @@ label {
   width: 100vw;
   height: 100vh;
   opacity: 0.1;
+  object-fit: cover;
   z-index: -1 !important;
 }
 
